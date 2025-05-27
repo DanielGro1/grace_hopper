@@ -1,85 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grace Hopper</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Hopper Tribute</title>
+    <style>
+        /* Global Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1a73e8;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            margin: 1rem auto;
+        }
+
+        header img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        /* Main Content Area */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        /* Headings */
+        h2 {
+            margin-bottom: 0.5rem;
+            color: #1a73e8;
+        }
+
+        /* Lists */
+        ul {
+            margin-top: 1rem;
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #1a73e8;
+            color: #fff;
+        }
+
+        /* Hyperlinks (non-nav) */
+        a {
+            color: #00796b;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Forms */
+        form {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        form button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        form button:hover {
+            background-color: #155ab6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-top: 1px solid #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Floating Home Button */
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1a73e8;
+            color: white;
+            font-size: 24px;
+            padding: 12px 16px;
+            border-radius: 50%;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .home-button:hover {
+            background-color: #0c56d0;
+        }
+
+        /* Responsive Design (for small screens) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table th, table td {
+                font-size: 0.9rem;
+            }
+
+            form button {
+                width: 100%;
+            }
+
+            .home-button {
+                font-size: 20px;
+                padding: 10px 14px;
+            }
+        }
+    </style>
 </head>
 <body id="top">
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#contributions">Contributions</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<nav>
-  <ul>
-    <li><a href="#contributions">Contributions</a></li>
-    <li><a href="#timeline">Timeline</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <!-- Header -->
+    <header>
+        <h1 style="font-size: 2.5rem; color: #1a73e8;">Grace Hopper</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg" alt="Grace Hopper">
+    </header>
 
-<header style="text-align:center; margin:1rem auto">
-  <h1 style="font-size: 2.5rem; color: #1a73e8">Grace Hopper</h1>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg" alt="Grace Hopper">
-</header>
+    <!-- Main Content -->
+    <main>
+        <article>
+            <section>
+                <!-- Add a paragraph about Grace Hopper's biography -->
+                <p>Grace Hopper (1906–1992) was a computer scientist, United States Navy rear admiral, and one of the earliest computer programmers. She was known for her pioneering work in computer programming and her role in the development of the first compiler for a computer programming language.</p>
+            </section>
 
-<main>
-  <article>
-    <section>
-      <p>Grace Hopper (1906–1992) was a computer scientist and Navy Rear Admiral. She pioneered programming languages and was a visionary in computing.</p>
-    </section>
+            <section id="contributions">
+                <!-- List her key contributions -->
+                <ul>
+                    <li>Developed the first compiler for computer programming languages.</li>
+                    <li>Helped develop COBOL, one of the earliest high-level programming languages.</li>
+                    <li>Popularized the term "debugging" in reference to fixing computer bugs.</li>
+                </ul>
+            </section>
 
-    <section id="contributions">
-      <h2>Key Contributions</h2>
-      <ul>
-        <li>Created the first compiler</li>
-        <li>Helped develop COBOL</li>
-        <li>Popularized the term "debugging"</li>
-      </ul>
-    </section>
+            <section id="timeline">
+                <!-- Add a timeline or a table of her major life events -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Event</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1906</td>
+                            <td>Grace Hopper was born.</td>
+                        </tr>
+                        <tr>
+                            <td>1944</td>
+                            <td>Developed the first compiler for a computer programming language.</td>
+                        </tr>
+                        <tr>
+                            <td>1959</td>
+                            <td>Contributed to the development of COBOL.</td>
+                        </tr>
+                        <tr>
+                            <td>1992</td>
+                            <td>Grace Hopper passed away.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-    <section id="timeline">
-      <h2>Career Timeline</h2>
-      <table>
-        <tr><th>Year</th><th>Milestone</th></tr>
-        <tr><td>1944</td><td>Worked on Harvard Mark I</td></tr>
-        <tr><td>1952</td><td>Developed A-0 Compiler</td></tr>
-        <tr><td>1959</td><td>Helped create COBOL</td></tr>
-        <tr><td>1986</td><td>Retired from Navy as Rear Admiral</td></tr>
-      </table>
-    </section>
+            <section>
+                <!-- Add a short paragraph about COBOL or her influence -->
+                <p>Grace Hopper's work with COBOL significantly influenced the development of modern computing, especially in business and government applications. Her advocacy for machine-independent programming languages helped make computing more accessible and efficient.</p>
+            </section>
+        </article>
 
-    <section>
-      <p>COBOL, one of the earliest programming languages, became widely used in business and government thanks to Hopper’s work.</p>
-    </section>
-  </article>
+        <section id="contact">
+            <!-- Add your contact form here! -->
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <form>
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-</main>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
 
-<a href="#top" class="home-button" title="Back to Top">🏠</a>
+    <!-- Floating Home Button -->
+    <a href="#top" class="home-button" title="Back to Top">🏠</a>
 
-<footer>
-  <p>&copy; 2025 Daniel Grobla</p>
-</footer>
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Grace Hopper Tribute</p>
+    </footer>
 </body>
 </html>
